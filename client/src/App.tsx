@@ -1,10 +1,25 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { Login, Register } from './pages';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Footer, Navbar } from './components';
+import { Home, Login, Register, Single, Write } from './pages';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>This is Home!</div>
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: '/post/:id',
+        element: <Single />
+      },
+      {
+        path: '/write',
+        element: <Write />
+      }
+    ]
   },
   {
     path: '/register',
@@ -18,8 +33,20 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router} />
+      </div>
+    </div>
+  );
+}
+
+function Layout() {
+  return (
     <>
-      <RouterProvider router={router} />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   );
 }
