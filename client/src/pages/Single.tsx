@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import DeleteImg from '../assets/delete.png';
 import EditImg from '../assets/edit.png';
+import { Menu } from '../components';
 
 export const Single = () => {
   return (
@@ -55,7 +56,9 @@ export const Single = () => {
         </p>
       </div>
 
-      <div className="menu"> menu</div>
+      <div className="menu">
+        <Menu />
+      </div>
     </div>
   );
 };
