@@ -27,6 +27,7 @@ export const Register = () => {
           onChange={() => {}}
         />
         <button onClick={() => {}}>Register</button>
+        <p>Error is occured!</p>
         <span>
           Do you have an account? <Link to="/login">Login</Link>
         </span>

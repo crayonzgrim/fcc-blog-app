@@ -20,6 +20,7 @@ export const Login = () => {
           onChange={() => {}}
         />
         <button onClick={() => {}}>Login</button>
+        <p>Error is occured!</p>
         <span>
           Don't you have an account? <Link to="/register">Register</Link>
         </span>

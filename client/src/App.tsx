@@ -1,6 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Footer, Navbar } from './components';
 import { Home, Login, Register, Single, Write } from './pages';
+import './style.scss';
 
 const router = createBrowserRouter([
   {
